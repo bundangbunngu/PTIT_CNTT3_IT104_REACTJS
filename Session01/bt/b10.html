@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function filter(array) {
+        let obj = {};
+        // B1: duyệt từng phần tử
+        for (let i = 0; i < array.length; i++) {
+          let word = array[i].split("").sort().join("");
+          if (!obj[word]) {
+            obj[word] = [];
+          }
+          obj[word].push(array[i]);
+        }
+        console.log(Object.values(obj));
+      }
+      let test1 = ["eat", "tea", "tan", "ate", "nat", "bat"];
+      filter(test1);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let phoneBooks = [];
+      function addContact(name, number, email) {
+        let contact = {
+          name,
+          number,
+          email,
+        };
+        phoneBooks.push(contact);
+      }
+      addContact("hehe", "0123456789", "hehe@gmail.com");
+      addContact("hehe2", "012345678", "hehe2@gmail.com");
+      addContact("hehe3", "01234567", "hehe3@gmail.com");
+      function displayContact() {
+        console.log("danh ba:");
+        if (phoneBooks.length == 0) {
+          console.log("danh ba rong");
+        }
+        for (let i = 0; i < phoneBooks.length; i++) {
+          console.log("name", phoneBooks[i].name);
+          console.log("number", phoneBooks[i].number);
+          console.log("gmail", phoneBooks[i].gmail);
+        }
+      }
+      displayContact();
+    </script>
+  </body>
+</html>

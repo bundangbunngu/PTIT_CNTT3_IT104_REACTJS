@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function displayUserInfo(user) {
+        const {
+          name,
+          age,
+          location: { city, country },
+          contact = {},
+          job = {},
+        } = user;
+
+        const { email = "unknown", phone = "unknown" } = contact;
+
+        const { title = "unknown", company = "unknown" } = job;
+
+        return `${name} is ${age} years old, lives in ${city}, ${country}, works as ${title} at ${company}, and can be contacted via ${email} or ${phone}.`;
+      }
+    </script>
+  </body>
+</html>
