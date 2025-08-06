@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    /* Language and Environment */
+    "target": "es2016", // Xác định phiên bản JavaScript mà TypeScript sẽ biên dịch xuống
+    "lib": ["es6", "DOM"], // Xác định các thư viện chuẩn (standard library) mà TypeScript sẽ dùng để kiểm tra kiểu
+    "module": "commonjs", // Chỉ định hệ thống module nào sẽ được dùng để biên dịch
+    "rootDir": "./src", // Chỉ định thư mục gốc chứa mã nguồn TypeScript
+    "noEmit": false, // Chỉ định có biên dịch file .ts ra file .js hay không
+    "outDir": "./dist", // Xác định thư mục đầu ra chứa file .js sau khi biên dịch
+    "noEmitOnError": true, // Không tạo file .js nếu có lỗi kiểu trong TypeScript
+    "esModuleInterop": true, // Cho phép tương thích khi import module CommonJS
+    "forceConsistentCasingInFileNames": true, // Đảm bảo viết hoa/viết thường đồng nhất trong import
+    "strict": true, // Bật tất cả các kiểm tra nghiêm ngặt về kiểu
+    "skipLibCheck": true // Bỏ qua kiểm tra kiểu trong các file .d.ts
+  },
+  "include": ["src/**/*"]
+}
