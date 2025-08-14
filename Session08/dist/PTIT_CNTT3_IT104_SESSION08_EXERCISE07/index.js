@@ -1,0 +1,15 @@
+function flatten(arr) {
+    let result = [];
+    for (let sub of arr) {
+        for (let item of sub) {
+            result.push(item);
+        }
+    }
+    return result;
+}
+console.log(flatten([
+    [1, 2],
+    [3, 4],
+    [5, 6],
+]));
+console.log(flatten([["apple", "banana"], ["cherry"], ["date", "elderberry"]]));
